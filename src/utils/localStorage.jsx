@@ -1,6 +1,7 @@
 const employees = [
     {
         "id": 1,
+        "firstName": "Rohan",
         "email": "employee1@example.com",
         "password": "123",
         "tasks": [
@@ -34,10 +35,17 @@ const employees = [
                 "completed": true,
                 "failed": false
             }
-        ]
+        ],
+        "taskCounts": {
+            "active": 2,
+            "newTask": 1,
+            "completed": 1,
+            "failed": 0
+        }
     },
     {
         "id": 2,
+        "firstName": "Aarav",
         "email": "employee2@example.com",
         "password": "123",
         "tasks": [
@@ -61,10 +69,17 @@ const employees = [
                 "completed": false,
                 "failed": false
             }
-        ]
+        ],
+        "taskCounts": {
+            "active": 2,
+            "newTask": 1,
+            "completed": 0,
+            "failed": 0
+        }
     },
     {
         "id": 3,
+        "firstName": "Vikram",
         "email": "employee3@example.com",
         "password": "123",
         "tasks": [
@@ -88,10 +103,17 @@ const employees = [
                 "completed": false,
                 "failed": false
             }
-        ]
+        ],
+        "taskCounts": {
+            "active": 1,
+            "newTask": 1,
+            "completed": 1,
+            "failed": 0
+        }
     },
     {
         "id": 4,
+        "firstName": "Nikhil",
         "email": "employee4@example.com",
         "password": "123",
         "tasks": [
@@ -115,10 +137,17 @@ const employees = [
                 "completed": false,
                 "failed": false
             }
-        ]
+        ],
+        "taskCounts": {
+            "active": 2,
+            "newTask": 1,
+            "completed": 0,
+            "failed": 0
+        }
     },
     {
         "id": 5,
+        "firstName": "Anjali",
         "email": "employee5@example.com",
         "password": "123",
         "tasks": [
@@ -142,13 +171,20 @@ const employees = [
                 "completed": false,
                 "failed": false
             }
-        ]
+        ],
+        "taskCounts": {
+            "active": 2,
+            "newTask": 1,
+            "completed": 0,
+            "failed": 0
+        }
     }
 ]
 
 const admin = [
     {
         "id": 1,
+        // "firstName": "Sanjay",
         "email": "admin@example.com",
         "password": "123"
     }
@@ -164,5 +200,5 @@ export const getLocalStorage = () => {
     const employees = JSON.parse(localStorage.getItem('employees'))
     const admin = JSON.parse(localStorage.getItem('admin'))
 
-    return {employees, admin}
+    return { employees, admin }
 }
